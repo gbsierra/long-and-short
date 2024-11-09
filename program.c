@@ -16,9 +16,9 @@ int main(int argc, char *argv[]){
     //open file using 'read'
     FILE *file1 = fopen(argv[1], "r");
 
-    //check if file is empty
+    //check if file1 is empty
     if(!file1){
-        printf("Could not open file!/n");
+        printf("Could not open file1!/n");
         exit(1);
     }
 
@@ -26,6 +26,17 @@ int main(int argc, char *argv[]){
     //open other 2 files using 'write'
     FILE *file2 = fopen(argv[2], "w");
     FILE *file3 = fopen(argv[3], "w");
+
+    //check if files 2 and 3 are empty
+    if(!file2){
+        printf("Could not open file2!/n");
+        exit(1);
+    }
+    //check if file is empty
+    if(!file3){
+        printf("Could not open file3!/n");
+        exit(1);
+    }
 
     int amt1=0;
     int amt2=0;
